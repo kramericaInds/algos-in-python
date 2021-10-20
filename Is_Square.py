@@ -1,4 +1,4 @@
-# Find if the given number is a perfect square of an integer
+# Find if the given number is a perfect square of an integer. This solution is through binary search
 
 def isSqr(num):
     arr = []
@@ -14,9 +14,9 @@ def isSqr(num):
             return mid
             break
         elif arr[mid] ** 2 < num:
-            left += 1
+            left = mid + 1
         else:
-            right -= 1
+            right = mid - 1
     return 'No'
 
-print(isSqr(17))
+print(isSqr(1))
